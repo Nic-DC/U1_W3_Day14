@@ -1,0 +1,112 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  width: 100%;
+  /* height: 100vh; */
+  background: lightblue;
+  font-size: 0.85rem;
+  font-family: "Montserrat", sans-serif;
+}
+
+.container {
+  width: 70%;
+  margin: 1rem auto;
+  /* height: 100vh; */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+/* bingoBoard */
+.bingoBoard {
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: 1rem;
+}
+
+.bingoSlot {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: aquamarine;
+  width: 3rem;
+  aspect-ratio: 1/1;
+  border: 1px solid lightblue;
+}
+
+/* buttonsDiv */
+.buttonsDiv {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.btn {
+  padding: 1rem 2.5rem;
+  background-color: orangered;
+  color: wheat;
+  border: none;
+  border-radius: 3px;
+  font-size: 1rem;
+  cursor: pointer;
+  margin-right: 3rem;
+}
+
+.btn:hover {
+  background-color: aquamarine;
+  color: darkgray;
+}
+
+.playBoardsInput {
+  font-size: 1rem;
+  padding: 1rem;
+  border-radius: 3px;
+  border: none;
+}
+
+/* bingoNumbers */
+.bingoNumbers {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 3rem;
+}
+
+.numberHeading {
+  width: 6rem;
+  aspect-ratio: 1/1;
+  background-color: orangered;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 2rem;
+  border-radius: 3px;
+}
+
+.currentNumberShown,
+.pastNumbersShown,
+.remainingNumbersShown {
+  width: 10rem;
+  aspect-ratio: 1/1;
+  /* background-color: darkgray; */
+  /* border: 1px solid darkgray; */
+  margin-right: 3rem;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  font-size: 1rem;
+  font-weight: bold;
+}
+
+.randomNrSame {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: orangered;
+  width: 3rem;
+  aspect-ratio: 1/1;
+  border: 1px solid orangered;
+}
