@@ -102,7 +102,7 @@ const createBingoBoard = function () {
 createBingoBoard();
 
 const generateRandomNumber = function () {
-  const random = Math.floor(Math.random() * 77);
+  const random = Math.floor(Math.random() * 76 + 1);
   return random;
 };
 
@@ -122,7 +122,22 @@ const highlight = function () {
     }
   }
 };
-//highlight();
+
+const createUserBoard = function () {
+  for (let i = 0; i < 24; i++) {
+    const userSlot = document.createElement("div");
+    userSlot.className = "bingoSlot";
+    const userSlotContent = document.createElement("div");
+    userSlotContent.className = "bingoSlotContent";
+
+    bingoSlotContent.innerText = generateRandomNumber();
+
+    userBoard.appendChild(userSlot);
+    userSlot.appendChild(userSlotContent);
+  }
+};
+createUserBoard();
+
 // EXTRA:
 
 // – Make sure to always select a new number (eg. avoid getting the number 10 multiple times).
