@@ -108,16 +108,21 @@ const generateRandomNumber = function () {
 
 const showRandomNumber = function () {
   currentNumber.innerText = generateRandomNumber();
+  highlight();
 };
 randomizeNumberBtn.addEventListener("click", showRandomNumber);
 
-// const highlight = function () {
-//   for (let i = 0; i < bingoNumbersArray.length; i++) {
-//     if (currentNumber.innerText === bingoNumbersArray[i]) {
-//     }
-//   }
-// };
-
+const allBingoContent = document.querySelectorAll(".bingoSlotContent");
+const allBingoDivs = document.querySelectorAll(".bingoSlot");
+const highlight = function () {
+  //const allBingoContent = document.querySelectorAll(".bingoSlotContent");
+  for (let i = 0; i < allBingoContent.length; i++) {
+    if (allBingoContent[i].innerText === currentNumber.innerText) {
+      allBingoDivs[i].style.backgroundColor = "orangered";
+    }
+  }
+};
+//highlight();
 // EXTRA:
 
 // – Make sure to always select a new number (eg. avoid getting the number 10 multiple times).
